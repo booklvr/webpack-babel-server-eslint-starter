@@ -1,0 +1,11 @@
+{
+  "name": "sara_500_people_api",
+  "version": "1.0.0",
+  "description": "api to serve and store people sara has met",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas de Waal <nick.a.dewaal@gmail.com>",
+  "license": "ISC"
+}
