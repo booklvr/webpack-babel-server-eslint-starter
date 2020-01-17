@@ -1,15 +1,20 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 module.exports = {
     entry: {
-        app: ['@babel/polyfill', './src/js/index.js']
+        app: ['@babel/polyfill', './src/index.js']
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js'
+        path: path.join(__dirname, 'dist'),
+        publicPath: '/',
+        filename: '[name].js'
     },
+    mode: 'development',
+    target: 'web',
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -21,9 +26,18 @@ module.exports = {
                 }
             },
             {
-                test: /\.(sa|sc|c)ss$/,
+                test: /\.html$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: "html-loader",
+                        // options: { minimize: true }
+                    }
+                ]
+            },
+            {
+                test: /\.(sc|c)ss$/,
+                use: [
+                    // MiniCssExtractPlugin.loader,
                     'css-loader',
                     'postcss-loader',
                     'sass-loader'
@@ -35,14 +49,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: '500 Chance Encounters',
             template: './src/html/index.html',
-            inject: true,
-            minify: {
-                removeComments: true,
-                collapseWhitespace: false
-            }
+            excludeChunks: [ 'server' ]
         }),
-        new MiniCssExtractPlugin({
-            filename: 'style.css'
-        })
+        new webpack.NoEmitOnErrorsPlugin()
     ]
 }
