@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "5f5a35eda86d125648dd";
+/******/ 	var hotCurrentHash = "2ca2a63b0d00483efb1a";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -10437,7 +10437,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "h1 {\n  background-color: pink;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none; }\n", ""]);
+exports.push([module.i, "h1 {\n  background-color: grey;\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none; }\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -12396,10 +12396,10 @@ module.exports.showProblems = showProblems;
 
 /***/ }),
 
-/***/ "./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=2000":
-/*!***************************************************************************!*\
-  !*** (webpack)-hot-middleware/client.js?path=/__webpack_hmr&timeout=2000 ***!
-  \***************************************************************************/
+/***/ "./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000":
+/*!****************************************************************************!*\
+  !*** (webpack)-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000 ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12710,7 +12710,7 @@ if (module) {
   };
 }
 
-/* WEBPACK VAR INJECTION */}.call(this, "?path=/__webpack_hmr&timeout=2000", __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, "?path=/__webpack_hmr&timeout=20000", __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
@@ -13100,14 +13100,14 @@ module.exports = exported;
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************!*\
-  !*** multi @babel/polyfill webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000 ./src/index.js ***!
-  \***********************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** multi @babel/polyfill webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 ./src/index.js ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
-__webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000 */"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=2000");
+__webpack_require__(/*! webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000 */"./node_modules/webpack-hot-middleware/client.js?path=/__webpack_hmr&timeout=20000");
 module.exports = __webpack_require__(/*! ./src/index.js */"./src/index.js");
 
 

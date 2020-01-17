@@ -8,7 +8,7 @@ module.exports = {
     entry: {
         app: [
             '@babel/polyfill',
-            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=2000',
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
             './src/index.js'
         ]
     },
@@ -22,6 +22,21 @@ module.exports = {
     devtool: 'source-map',
     module: {
         rules: [
+            {
+                enforce: "pre",
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: "eslint-loader",
+                options: {
+                    emitWarning: true,
+                    failOnError: false,
+                    failOnWarning: false,
+                    rules: {
+                        "no-console": 0,
+                        "no-undef": 0,
+                    }
+                }
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
