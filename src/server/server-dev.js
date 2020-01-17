@@ -2,12 +2,18 @@ import path from 'path';
 import 'dotenv/config';  // load environment variables from
 import cors from 'cors';  // creates a cors header to prevent "Cross-Origin Request Blocked errors"
 import express from 'express'; // creates express server
+
 import webpack from 'webpack';
 import webpackDevMilddleWare from 'webpack-dev-middleware';
+import webpackHotMiddleware from 'webpack-hot-middleware';
 import config from '../../webpack.dev.config.js';
+
 import uuidv4 from 'uuid/v4'; // creates unique ideas uudiv4()
 
 //import models and routes
+
+//MIDDLEWARE
+
 
 const app = express(),
             DIST_DIR = __dirname,
@@ -18,7 +24,9 @@ app.use(webpackDevMilddleWare(compiler, {
     publicPath: config.output.publicPath
 }));
 
-//MIDDLEWARE
+app.use(webpackHotMiddleware(compiler));
+
+
 
 // app.use(express.json());    // body-parser - parses incoming request stream and makes it accessible on req.body and exposes it as json
 
